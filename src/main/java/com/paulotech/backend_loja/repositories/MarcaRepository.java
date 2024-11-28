@@ -1,0 +1,7 @@
+package com.paulotech.backend_loja.repositories;
+
+import com.paulotech.backend_loja.entity.Marca;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MarcaRepository extends JpaRepository<Marca, Long>{
+}
