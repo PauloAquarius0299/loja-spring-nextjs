@@ -12,7 +12,7 @@ import java.util.List;
 public class PermissaoService {
 
     @Autowired
-    public PermissaoRepository permissaoRepository;
+    private PermissaoRepository permissaoRepository;
 
     public List<Permissao> buscarPermissao(){
         return permissaoRepository.findAll();

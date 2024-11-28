@@ -22,6 +22,12 @@ public class Produto {
     private String descrincaoDetalhada;
     private Double valorCusto;
     private Double valorVenda;
+    @ManyToOne
+    @JoinColumn(name = "idMarca")
+    private Marca marca;
+    @ManyToOne
+    @JoinColumn(name = "idCategoria")
+    private Categoria categoria;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataCriacao;
 
