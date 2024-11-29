@@ -27,4 +27,29 @@ public class Estado {
     public void setDataAtualizacao(Date date) {
         this.dataAtualizacao = date;
     }
+
+    // Construtor padrão
+    public Estado() {}
+
+    // Construtor que aceita String
+    public Estado(String sigla) {
+        this.sigla = sigla;
+    }
+
+    // Getter e Setter
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
