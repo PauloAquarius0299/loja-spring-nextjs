@@ -41,4 +41,9 @@ public class Produto {
     public void setDataAtualizacao(Date date) {
         this.dataAtualizacao = date;
     }
+
+    public Long getId() {
+        return this.id;
+    }
+
 }
