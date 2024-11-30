@@ -56,4 +56,7 @@ public class Pessoa {
         this.permissaoPessoas = pp;
     }
 
+    public String getEmail() {
+        return this.email = email;
+    }
 }
