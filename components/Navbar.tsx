@@ -9,7 +9,6 @@ import {
 import Link from "next/link"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
   
-
 const Navbar = () => {
   return (
     <header className='bg-primary dark:bg-slate-700 text-white py-2 px-5 flex justify-between'>
