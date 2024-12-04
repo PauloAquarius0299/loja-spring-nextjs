@@ -1,6 +1,6 @@
-'use client'
+'use client';
+
 import { Button } from '@/components/ui/button';
-import { Search } from 'lucide-react';
 import React, { useState } from 'react';
 
 const Estados = () => {
@@ -14,8 +14,12 @@ const Estados = () => {
       setCadastrados((prev) => [...prev, { estado, sigla }]);
       setEstado('');
       setSigla('');
-      setIsModalOpen(false); // Fechar modal após adicionar
+      setIsModalOpen(false); 
     }
+  };
+
+  const handleDeleteEstado = (index: number) => {
+    setCadastrados((prev) => prev.filter((_, i) => i !== index));
   };
 
   return (
@@ -83,14 +87,23 @@ const Estados = () => {
           />
         </form>
       </div>
+
       <div className="px-8">
         {cadastrados.map((item, index) => (
           <div
             key={index}
             className="flex justify-between items-center p-4 border-b last:border-b-0"
           >
-            <span>{item.estado}</span>
-            <span className="text-gray-600">{item.sigla}</span>
+            <div>
+              <span>{item.estado}</span>
+              <span className="text-gray-600 ml-4">{item.sigla}</span>
+            </div>
+            <button
+              onClick={() => handleDeleteEstado(index)}
+              className="text-red-500 hover:text-red-700"
+            >
+              🗑️
+            </button>
           </div>
         ))}
       </div>
